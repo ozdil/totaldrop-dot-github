@@ -1,0 +1,28 @@
+name: 35-Language Translation Review
+description: Native-speaker audit of one of TotalDrop's 35 supported languages (l10n/status.json)
+title: "[L10n]: Native review for "
+labels: ["area:l10n"]
+body:
+  - type: input
+    id: locale
+    attributes:
+      label: Language / BCP-47 Tag
+      description: "One of the 35 supported locales (e.g., ar, bn, cs, da, de, el, es, fa, fi, fr, he, hi, hu, id, it, ja, ko, ms, nb, nl, pl, pt-BR, pt-PT, ro, ru, sv, sw, th, uk, ur, vi, zh-Hans, zh-Hant)"
+      placeholder: "de"
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Files Audited Against English Source
+      options:
+        - label: "`l10n/app/app_<locale>.arb` (including security-critical keys in `l10n/status.json`)"
+        - label: "`l10n/cli/cli_<locale>.arb` (including `noWords` vs `cliYes` safety check)"
+        - label: "`totaldrop-site/public/i18n/<locale>.json` and `privacy/<locale>.html`"
+        - label: "RTL layout & LTR isolation of transfer codes / SAS words (for `ar`, `fa`, `he`, `ur`)"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Review Findings or Corrections
+    validations:
+      required: true

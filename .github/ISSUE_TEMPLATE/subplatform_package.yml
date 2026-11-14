@@ -1,0 +1,42 @@
+name: Sub-Platform × Architecture Package Unit
+description: Track a specific package format (deb, rpm, tar.gz, arch, msix, dmg, apk, ipa, pkg) and CPU target (x86_64, arm64, riscv64)
+title: "[Pkg]: "
+labels: ["area:packaging"]
+body:
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System Family
+      options:
+        - Linux (deb, rpm, tar.gz, arch, flatpak, appimage)
+        - Windows (msix, winget, portable-zip)
+        - macOS (dmg, pkg, homebrew)
+        - Android & Android TV (play-aab, fdroid-apk, split-apk, tv-apk)
+        - iOS, iPadOS & tvOS (ios-ipa, tvos-ipa)
+        - CLI & BSD (static-tar.gz, freebsd-pkg, openbsd-pkg)
+        - Web (wasm32-simd128, wasm32-baseline)
+    validations:
+      required: true
+  - type: dropdown
+    id: arch
+    attributes:
+      label: CPU Architecture
+      options:
+        - x86_64
+        - arm64 / aarch64 / arm64-v8a
+        - riscv64 / riscv64gc
+        - armeabi-v7a / armv7
+        - wasm32
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Isolation & Reproducibility Checklist
+      value: |
+        - [ ] Isolated recipe under `subplatforms/<format>/<arch>/`
+        - [ ] Dedicated CI workflow `.github/workflows/pkg-<format>-<arch>.yml`
+        - [ ] Deterministic `SOURCE_DATE_EPOCH` build & smoke startup check
+        - [ ] `SHA256SUMS` + Sigstore `*.sigstore.json` build provenance attestation
+    validations:
+      required: true

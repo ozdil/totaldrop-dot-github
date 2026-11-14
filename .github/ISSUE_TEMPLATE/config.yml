@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security Vulnerability Report (Private)
+    url: https://github.com/totaldrop-app/totaldrop-core/security/advisories/new
+    about: Never report security or cryptographic vulnerabilities in public issues. Use GitHub Private Vulnerability Reporting.
+  - name: Architecture & Protocol Documentation
+    url: https://github.com/totaldrop-app/totaldrop-core/tree/main/docs
+    about: Read protocol notes, threat model, 35-language rules, and Architecture Decision Records (0001–0020).

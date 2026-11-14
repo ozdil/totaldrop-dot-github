@@ -1,0 +1,59 @@
+name: Bug Report
+description: Report a reproducible defect in a TotalDrop client, CLI, server, or package
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please write in **English** so the entire team can triage and fix the issue. Never include secret transfer codes from live sessions or personal paths.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / Repository
+      options:
+        - Core / Protocol / Cryptography (totaldrop-core)
+        - Linux Desktop (totaldrop-linux)
+        - Android / Android TV (totaldrop-android)
+        - Windows (totaldrop-windows)
+        - macOS (totaldrop-macos)
+        - iOS / iPadOS / tvOS (totaldrop-ios-tvos)
+        - CLI / FreeBSD / OpenBSD (totaldrop-cli-bsd)
+        - Web WASM (totaldrop-web-wasm)
+        - Rendezvous / Relay Servers (totaldrop-servers)
+        - Website totaldrop.app (totaldrop-site)
+        - Tamarin / Fuzzing (totaldrop-formal-fuzz)
+    validations:
+      required: true
+  - type: input
+    id: subplatform_arch
+    attributes:
+      label: Sub-Platform Format & CPU Architecture
+      description: "Example: deb / riscv64, flatpak / arm64, msix / x86_64, play-aab / arm64-v8a, wasm32-simd128"
+      placeholder: "deb / x86_64"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or Commit SHA
+      placeholder: "0.3.0-beta.6 or commit SHA"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Sender on ...
+        2. Receiver on ...
+        3. Observed behavior ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior & Acceptance Criteria
+      description: State clearly when this issue can be considered resolved.
+    validations:
+      required: true

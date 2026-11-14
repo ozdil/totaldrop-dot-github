@@ -1,0 +1,37 @@
+name: Feature or Roadmap Task
+description: Propose a roadmap task, protocol enhancement, or Ghost Ring milestone item
+title: "[Feat]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        All roadmap work is tracked in **English**. Before proposing architectural changes, review `docs/decisions/` in `totaldrop-core`.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Technical Area
+      options:
+        - Core Protocol & Connectivity (IPv6, UPnP/PCP, LAN, WebTransport)
+        - Anonymous Membership — Ghost Ring Stage 1 (My Devices)
+        - Anonymous Membership — Ghost Ring Stage 2 (Known Contacts, Witness Log, Recovery)
+        - Sub-Platform × CPU Packaging & Reproducible Builds
+        - 35-Language Localization & l10n-codegen
+        - Native UI / Accessibility / RTL Layout
+        - Formal Verification (Tamarin) & Fuzzing
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Context & Motivation
+      description: Why is this needed, and which ADR or threat-model item does it relate to?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done
+      description: Concrete tests, proofs, docs, and 35-language updates required to close this issue.
+    validations:
+      required: true
