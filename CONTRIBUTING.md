@@ -15,7 +15,7 @@ To keep our expanding international engineering team aligned on a single source 
 - **Tamarin Formal Proofs & Fuzz Harnesses:** [`totaldrop-formal-fuzz`](https://github.com/totaldrop-app/totaldrop-formal-fuzz)
 - **Cloudflare Workers & Self-Hosted Rust Servers:** [`totaldrop-servers`](https://github.com/totaldrop-app/totaldrop-servers)
 - **Website (`totaldrop.app`) & Privacy Policy:** [`totaldrop-site`](https://github.com/totaldrop-app/totaldrop-site)
-- **Desktop, Mobile, TV, CLI/BSD & Web Clients:** [`totaldrop-linux`](https://github.com/totaldrop-app/totaldrop-linux), [`totaldrop-android`](https://github.com/totaldrop-app/totaldrop-android), [`totaldrop-windows`](https://github.com/totaldrop-app/totaldrop-windows), [`totaldrop-macos`](https://github.com/totaldrop-app/totaldrop-macos), [`totaldrop-ios-tvos`](https://github.com/totaldrop-app/totaldrop-ios-tvos), [`totaldrop-cli-bsd`](https://github.com/totaldrop-app/totaldrop-cli-bsd), [`totaldrop-web-wasm`](https://github.com/totaldrop-app/totaldrop-web-wasm).
+- **Desktop, Mobile, TV & CLI/BSD Clients:** [`totaldrop-linux`](https://github.com/totaldrop-app/totaldrop-linux), [`totaldrop-android`](https://github.com/totaldrop-app/totaldrop-android), [`totaldrop-windows`](https://github.com/totaldrop-app/totaldrop-windows), [`totaldrop-macos`](https://github.com/totaldrop-app/totaldrop-macos), [`totaldrop-ios-tvos`](https://github.com/totaldrop-app/totaldrop-ios-tvos), [`totaldrop-cli-bsd`](https://github.com/totaldrop-app/totaldrop-cli-bsd) (`totaldrop-web-wasm` is reserved/shelved — browser receiver is not planned per `totaldrop#30` and threat model `T9`).
 
 ## 3. Workflow, Co-Maintainer Review & Security Bar
 
